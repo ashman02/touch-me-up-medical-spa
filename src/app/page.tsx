@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Home() {
 	return (
-		<main>
+		<main className="flex flex-col gap-32">
 			<section className="flex flex-col items-center gap-8 pt-32 relative h-screen min-h-[600px] w-full">
 				<h1 className="hero-heading flex flex-col items-center justify-center">
 					<div>{homeData.hero.title1}</div>
@@ -63,6 +63,24 @@ export default function Home() {
 							className="w-full h-full object-cover"
 						/>
 					</div>
+				</div>
+			</section>
+			<section className="aboutSection my-container py-20 flex flex-col gap-8">
+				<h1 className="section-heading w-3/4 text-gray-300">
+					{homeData.about.title}
+				</h1>
+				<div className="images flex gap-4">
+					{homeData.about.images.map((img, idx) => (
+						<div key={idx} className="w-1/2 aspect-[0.74/1]">
+							<Image
+								src={img}
+								alt="Owner Image"
+								width={920}
+								height={1241}
+								className="w-full h-full object-cover"
+							/>
+						</div>
+					))}
 				</div>
 			</section>
 		</main>

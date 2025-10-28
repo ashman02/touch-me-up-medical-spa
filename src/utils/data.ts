@@ -12,6 +12,10 @@ const homeData = {
 			"/images/after-2.jpg",
 		],
 	},
+	about : {
+		title : "At Touch Me Up Medical Spa & Skin Center, we believe beauty is personal — not one-size-fits-all. That's why every treatment is tailored to you, combining advanced aesthetic technology with the expertise you deserve.",
+		images : ["/images/owner-1.jpg", "/images/owner-2.jpg"]
+	}
 }
 
 export { homeData }
