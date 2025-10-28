@@ -1,4 +1,5 @@
 import Button from "@/components/Button"
+import ServiceCard from "@/components/ServiceCard"
 import { homeData } from "@/utils/data"
 import Image from "next/image"
 
@@ -81,6 +82,25 @@ export default function Home() {
 							/>
 						</div>
 					))}
+				</div>
+			</section>
+			<section className="servicesSection my-container flex flex-col gap-8 pb-10">
+				<h1 className="section-heading w-1/2">
+					{homeData.services.title}
+				</h1>
+				<div className="services flex flex-wrap gap-4">
+					{homeData.services.servicesArray.map((service) => (
+						<div key={service.id} className="w-[calc(33.33%-12px)]">
+							<ServiceCard
+								title={service.name}
+								img={service.img}
+							/>
+						</div>
+					))}
+				</div>
+				<div className="flex gap-6">
+					<Button title="View All Services" variant="secondary" />
+					<Button title="Book Your Free Consultation"  />
 				</div>
 			</section>
 		</main>

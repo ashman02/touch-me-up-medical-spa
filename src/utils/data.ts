@@ -12,10 +12,45 @@ const homeData = {
 			"/images/after-2.jpg",
 		],
 	},
-	about : {
-		title : "At Touch Me Up Medical Spa & Skin Center, we believe beauty is personal — not one-size-fits-all. That's why every treatment is tailored to you, combining advanced aesthetic technology with the expertise you deserve.",
-		images : ["/images/owner-1.jpg", "/images/owner-2.jpg"]
-	}
+	about: {
+		title: "At Touch Me Up Medical Spa & Skin Center, we believe beauty is personal — not one-size-fits-all. That's why every treatment is tailored to you, combining advanced aesthetic technology with the expertise you deserve.",
+		images: ["/images/owner-1.jpg", "/images/owner-2.jpg"],
+	},
+	services: {
+		title: "How We Erase Years Without Surgery or Time Off Work",
+		servicesArray: [
+			{
+				id: 0,
+				name: "Botox",
+				img: "/images/botox.jpg",
+			},
+			{
+				id: 1,
+				name: "Fillers",
+				img: "/images/filler.jpg",
+			},
+			{
+				id: 2,
+				name: "Laser Hair Removal",
+				img: "/images/laser-hair-removal-2.jpg",
+			},
+			{
+				id: 3,
+				name: "Microneedling",
+				img: "/images/microneedling.jpg",
+			},
+			{
+				id: 4,
+				name: "PRP",
+				img: "/images/prp.jpg",
+			},
+			{
+				id: 5,
+				name: "Morpheus",
+				img: "/images/morepheus.jpg",
+			},
+		],
+	},
 }
 
 export { homeData }
