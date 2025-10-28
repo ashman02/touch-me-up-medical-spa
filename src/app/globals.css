@@ -52,5 +52,5 @@
 	@apply font-body text-2xl leading-normal
 }
 .button-text {
-	@apply font-body text-base font-bold leading-normal
+	@apply font-body text-base leading-normal
 }
