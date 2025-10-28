@@ -51,6 +51,20 @@ const homeData = {
 			},
 		],
 	},
+	results: {
+		title: "See The Difference for Yourself",
+		images: [
+			"/images/b-and-f-1.png",
+			"/images/b-and-f-2.png",
+			"/images/b-and-f-1.png",
+			"/images/b-and-f-2.png",
+			"/images/b-and-f-1.png",
+			"/images/b-and-f-2.png",
+			"/images/b-and-f-1.png",
+			"/images/b-and-f-2.png",
+			"/images/b-and-f-1.png",
+		],
+	},
 }
 
 export { homeData }

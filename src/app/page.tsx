@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Home() {
 	return (
-		<main className="flex flex-col gap-32">
+		<main className="flex flex-col gap-32 pb-10">
 			<section className="flex flex-col items-center gap-8 pt-32 relative h-screen min-h-[600px] w-full">
 				<h1 className="hero-heading flex flex-col items-center justify-center">
 					<div>{homeData.hero.title1}</div>
@@ -84,7 +84,7 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-			<section className="servicesSection my-container flex flex-col gap-8 pb-10">
+			<section className="servicesSection my-container flex flex-col gap-8">
 				<h1 className="section-heading w-1/2">
 					{homeData.services.title}
 				</h1>
@@ -100,7 +100,30 @@ export default function Home() {
 				</div>
 				<div className="flex gap-6">
 					<Button title="View All Services" variant="secondary" />
-					<Button title="Book Your Free Consultation"  />
+					<Button title="Book Your Free Consultation" />
+				</div>
+			</section>
+			<section className="result-section my-container flex h-screen min-h-[600px] overflow-hidden">
+				<div className="w-1/2">
+					<h1 className="section-heading w-3/4">
+						{homeData.results.title}
+					</h1>
+				</div>
+				<div className="w-1/2 flex flex-wrap gap-4">
+					{homeData.results.images.map((img, idx) => (
+						<div
+							key={idx}
+							className="w-[calc(33.33%-11px)] aspect-[0.81/1]"
+						>
+							<Image
+								src={img}
+								alt={"Before and After Image"}
+								width={293}
+								height={363}
+								className="w-full h-full object-cover"
+							/>
+						</div>
+					))}
 				</div>
 			</section>
 		</main>
