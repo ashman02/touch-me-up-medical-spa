@@ -65,6 +65,54 @@ const homeData = {
 			"/images/b-and-f-1.png",
 		],
 	},
+	testimonial: {
+		title1: "Real Clients.",
+		title2: "Real Transformations",
+		testimonialsRow1: [
+			{
+				name: "Anna Mckay",
+				content:
+					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+			},
+			{
+				name: "Elizabeth T.",
+				content:
+					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+			},
+			{
+				name: "Anna Mckay",
+				content:
+					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+			},
+			{
+				name: "Elizabeth T.",
+				content:
+					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+			},
+		],
+		testimonialsRow2: [
+			{
+				name: "Elizabeth T.",
+				content:
+					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+			},
+			{
+				name: "Anna Mckay",
+				content:
+					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+			},
+			{
+				name: "Elizabeth T.",
+				content:
+					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+			},
+			{
+				name: "Anna Mckay",
+				content:
+					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+			},
+		],
+	},
 }
 
 export { homeData }

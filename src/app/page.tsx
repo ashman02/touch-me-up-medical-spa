@@ -1,5 +1,6 @@
 import Button from "@/components/Button"
 import ServiceCard from "@/components/ServiceCard"
+import TestimonialCard from "@/components/TestimonialCard"
 import { homeData } from "@/utils/data"
 import Image from "next/image"
 
@@ -124,6 +125,48 @@ export default function Home() {
 							/>
 						</div>
 					))}
+				</div>
+			</section>
+			<section className="testimonial-section my-container flex flex-col gap-8 overflow-hidden">
+				<div className="section-heading flex flex-col items-center justify-center">
+					<h1>{homeData.testimonial.title1}</h1>
+					<h1>{homeData.testimonial.title2}</h1>
+				</div>
+				<div className="testimonial-container flex flex-col gap-4 overflow-hidden">
+					<div className="overflow-x-visible">
+						<div className="row-1 flex gap-4">
+							{homeData.testimonial.testimonialsRow1.map(
+								(t, idx) => (
+									<div
+										key={idx}
+										className="w-[412px] h-[512px] shrink-0"
+									>
+										<TestimonialCard
+											content={t.content}
+											name={t.name}
+										/>
+									</div>
+								)
+							)}
+						</div>
+					</div>
+					<div className="overflow-x-visible">
+						<div className="row-2 flex gap-4">
+							{homeData.testimonial.testimonialsRow2.map(
+								(t, idx) => (
+									<div
+										key={idx}
+										className="w-[412px] h-[512px] shrink-0"
+									>
+										<TestimonialCard
+											content={t.content}
+											name={t.name}
+										/>
+									</div>
+								)
+							)}
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
