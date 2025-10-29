@@ -29,6 +29,14 @@
 	--text-9xl: 6rem;
 
 	--leading-normal: 1.4;
+
+	/* As of now I am restteing all the breakpoints but I'm only changing lg one so later just change that */
+	--breakpoint-* : initial;
+	--breakpoint-sm: 40rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 70rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: 96rem;
 }
 
 @theme inline {
@@ -39,18 +47,18 @@
 /* utility classes for ease of use */
 
 .my-container {
-	@apply px-8
+	@apply px-2 md:px-6 lg:px-8;
 }
 
 .hero-heading {
-	@apply text-7xl leading-none tracking-tight 
+	@apply text-4xl md:text-6xl lg:text-7xl leading-none tracking-tight;
 }
 .section-heading {
-	@apply text-5xl leading-none tracking-tight 
+	@apply text-2xl md:text-4xl lg:text-5xl leading-none tracking-tight;
 }
 .paragraph-text {
-	@apply font-body text-2xl leading-normal
+	@apply font-body text-base md:text-xl lg:text-2xl leading-normal;
 }
 .button-text {
-	@apply font-body text-base leading-normal
+	@apply font-body text-xs md:text-base leading-normal;
 }

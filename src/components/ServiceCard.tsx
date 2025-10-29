@@ -17,7 +17,7 @@ const ServiceCard = ({ title, img }: CardProps) => {
 					className="w-full h-full object-cover"
 				/>
 			</div>
-			<h1 className="section-heading text-background absolute bottom-4 left-4 z-10">
+			<h1 className="section-heading text-background absolute bottom-3 lg:bottom-4 left-2 lg:left-4 z-10">
 				{title}
 			</h1>
 			{/* <div className="bg-linear-to-t from-foreground to-foreground/0 absolute bottom-0 w-full h-16 opacity-50" /> */}

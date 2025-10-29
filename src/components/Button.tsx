@@ -8,7 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ title, variant = "primary", ...props }: ButtonProps) => {
 	return (
 		<button
-			className="flex items-center justify-center gap-3 px-10 py-6 cursor-pointer"
+			className="flex items-center justify-center gap-3 px-5 md:px-7 lg:px-10 py-3 md:py-4 lg:py-6 cursor-pointer"
 			{...props}
 			style={{
 				backgroundColor:
@@ -28,8 +28,7 @@ const Button = ({ title, variant = "primary", ...props }: ButtonProps) => {
 			<h3 className="button-text uppercase">{title}</h3>
 			<div>
 				<svg
-					width="26"
-					height="22"
+					className="w-5 lg:w-[26px] h-4 lg:h-5"
 					viewBox="0 0 26 22"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
