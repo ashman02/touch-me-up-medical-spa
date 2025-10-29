@@ -112,7 +112,7 @@ export default function Home() {
 			</section>
 			<section className="result-section flex h-screen min-h-[600px] overflow-hidden">
 				<div className="w-1/2">
-					<h1 className="section-heading w-full lg:w-3/4">
+					<h1 className="section-heading w-full lg:w-3/5">
 						{homeData.results.title}
 					</h1>
 				</div>

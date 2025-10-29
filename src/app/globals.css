@@ -47,7 +47,7 @@
 /* utility classes for ease of use */
 
 .my-container {
-	@apply px-2 md:px-6 lg:px-8;
+	@apply px-2 md:px-3 lg:px-4;
 }
 
 .hero-heading {
