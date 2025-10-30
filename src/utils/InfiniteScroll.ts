@@ -70,7 +70,7 @@ export function horizontalLoop(
   gsap.set(itemsArray, { x: 0 })
 
   // eslint-disable-next-line prefer-const
-  const totalWidth =
+  totalWidth =
     itemsArray[length - 1].offsetLeft +
     (xPercents[length - 1] / 100) * widths[length - 1] -
     startX +
