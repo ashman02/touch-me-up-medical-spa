@@ -6,10 +6,26 @@ const homeData = {
 			"Expert, non-surgical treatments that enhance your natural beauty—without the downtime or overdone look. Trusted by professionals who value real results.",
 		cta: "Book Your Free Consultation",
 		images: [
-			"/images/after-1.jpg",
-			"/images/after-2.jpg",
-			"/images/after-1.jpg",
-			"/images/after-2.jpg",
+			{
+				id : 0,
+				img : "/images/after-1.jpg",
+				classes : "top-[60%] md:top-1/2 left-0 lg:top-1/5 lg:left-[5%]"
+			},
+			{
+				id : 1,
+				img : "/images/after-2.jpg",
+				classes : "bottom-[15%] md:bottom-[5%] left-0 lg:bottom-1/10 lg:left-1/4"
+			},
+			{
+				id : 2,
+				img : "/images/after-1.jpg",
+				classes : "bottom-[5%] md:bottom-[2%] right-0 lg:bottom-1/12 lg:right-1/5"
+			},
+			{
+				id : 3,
+				img : "/images/after-2.jpg",
+				classes : "top-[70%] md:top-[60%] right-0 lg:top-1/4 lg:right-[5%]"
+			},
 		],
 	},
 	about: {

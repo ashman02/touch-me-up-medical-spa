@@ -1,13 +1,25 @@
+"use client"
 import Button from "@/components/Button"
 import ServiceCard from "@/components/ServiceCard"
 import TestimonialCard from "@/components/TestimonialCard"
 import { homeData } from "@/utils/data"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 import Image from "next/image"
 
+gsap.registerPlugin(useGSAP)
+
 export default function Home() {
+	useGSAP(() => {
+		gsap.to(".hero-img", {
+			clipPath: "inset(0% 0% 0% 0%)",
+			duration: 1,
+			ease: "sine.inOut",
+		})
+	}, [])
 	return (
 		<main className="my-container flex flex-col gap-32 pb-10 overflow-hidden">
-			<section className=" flex flex-col items-center gap-5 md:gap-6 lg:gap-8 pt-24 md:pt-32 relative h-screen min-h-[700px] lg:min-h-[600px] w-full">
+			<section className="flex flex-col items-center gap-5 md:gap-6 lg:gap-8 pt-24 md:pt-32 relative h-screen min-h-[700px] lg:min-h-[600px] w-full">
 				<h1 className="hero-heading w-full flex flex-col items-center justify-center">
 					<div className="text-center">{homeData.hero.title1}</div>
 					<div className="text-center">{homeData.hero.title2}</div>
@@ -17,54 +29,25 @@ export default function Home() {
 				</p>
 				<Button title={homeData.hero.cta} variant="primary" />
 				<div className="randomImages absolute w-full h-full top-0 -z-10">
-					{/* Image  1 */}
-					<div className="w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute top-[60%] md:top-1/2 left-0 lg:top-1/5 lg:left-[5%]">
-						<Image
-							src={homeData.hero.images[0]}
-							alt="Result Image 1"
-							width={264}
-							height={169}
-							preload
-							quality={100}
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					{/* Image 2 */}
-					<div className="w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute bottom-[15%] md:bottom-[5%] left-0 lg:bottom-1/10 lg:left-1/4">
-						<Image
-							src={homeData.hero.images[1]}
-							alt="Result Image 1"
-							width={264}
-							height={169}
-							preload
-							quality={100}
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					{/* Image 3 */}
-					<div className="w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute bottom-[5%] md:bottom-[2%] right-0 lg:bottom-1/12 lg:right-1/5">
-						<Image
-							src={homeData.hero.images[2]}
-							alt="Result Image 1"
-							width={264}
-							height={169}
-							preload
-							quality={100}
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					{/* Image 4 */}
-					<div className="w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute top-[70%] md:top-[60%] right-0 lg:top-1/4 lg:right-[5%]">
-						<Image
-							src={homeData.hero.images[3]}
-							alt="Result Image 1"
-							width={264}
-							height={169}
-							preload
-							quality={100}
-							className="w-full h-full object-cover"
-						/>
-					</div>
+					{homeData.hero.images.map((img) => (
+						<div
+							key={img.id}
+							className={`w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute overflow-hidden ${img.classes}`}
+						>
+							<Image
+								src={img.img}
+								alt="Result Image"
+								width={264}
+								height={169}
+								preload
+								quality={100}
+								className="hero-img w-full h-full object-cover"
+								style={{
+									clipPath: "inset(0% 0% 100% 0%)",
+								}}
+							/>
+						</div>
+					))}
 				</div>
 			</section>
 			<section className="about-section py-16 md:py-20 flex flex-col gap-6 md:gap-8">
