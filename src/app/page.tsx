@@ -18,8 +18,10 @@ export default function Home() {
 	const heroTlRef = useRef<GSAPTimeline>(null)
 	const aboutRef = useRef<HTMLDivElement>(null)
 	const aboutHeaderRef = useRef<HTMLHeadingElement>(null)
+	const resultsSectionRef = useRef<HTMLDivElement>(null)
+	const resultsContainerRef = useRef<HTMLDivElement>(null)
 	useGSAP(() => {
-		// hero section animations
+		// hero section animations + smooth scrolling and parallax
 		if (heroTlRef.current) heroTlRef.current.kill()
 		ScrollSmoother.create({
 			smooth: 1,
@@ -65,6 +67,29 @@ export default function Home() {
 				trigger: ".about-image",
 				start: "top 50%",
 				end: "bottom bottom",
+			},
+		})
+
+		// results section animation
+		const scrollHeight = () => {
+			if (resultsContainerRef.current) {
+				return resultsContainerRef.current.scrollHeight
+			} else return "200%"
+		}
+
+		gsap.to(resultsContainerRef.current, {
+			y: () => -scrollHeight(),
+			ease: "none",
+			scrollTrigger: {
+				trigger: resultsSectionRef.current,
+				start: "top top",
+				end: () => `+=${resultsContainerRef.current?.scrollHeight}px`,
+				pinType: "transform",
+				pinSpacing: true,
+				scrub: 1,
+				pin: true,
+				invalidateOnRefresh: true,
+				markers: true,
 			},
 		})
 	}, [])
@@ -171,13 +196,20 @@ export default function Home() {
 							<Button title="Book Your Free Consultation" />
 						</div>
 					</section>
-					<section className="result-section flex h-screen min-h-[600px] overflow-hidden">
+					<section
+						ref={resultsSectionRef}
+						className="result-section flex h-screen min-h-[600px] overflow-hidden"
+						data-speed="1"
+					>
 						<div className="w-1/2">
 							<h1 className="section-heading w-full lg:w-3/5">
 								{homeData.results.title}
 							</h1>
 						</div>
-						<div className="w-1/2 flex flex-wrap gap-2 md:gap-3 lg:gap-4">
+						<div
+							ref={resultsContainerRef}
+							className="w-1/2 flex flex-wrap gap-2 md:gap-3 lg:gap-4"
+						>
 							{homeData.results.images.map((img, idx) => (
 								<div
 									key={idx}
