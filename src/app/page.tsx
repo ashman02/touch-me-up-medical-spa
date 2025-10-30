@@ -154,7 +154,7 @@ export default function Home() {
 							{homeData.services.servicesArray.map((service) => (
 								<div
 									key={service.id}
-									className="w-full md:w-[calc(50%-6px)] lg:w-[calc(33.33%-12px)]"
+									className="w-full md:w-[calc(50%-6px)] lg:w-[calc(33.33%-12px)] overflow-hidden"
 								>
 									<ServiceCard
 										title={service.name}

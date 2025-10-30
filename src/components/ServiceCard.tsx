@@ -14,7 +14,8 @@ const ServiceCard = ({ title, img }: CardProps) => {
 					alt={title}
 					width={500}
 					height={500}
-					className="w-full h-full object-cover"
+					className="w-full h-full object-cover scale-110"
+					data-speed="auto"
 				/>
 			</div>
 			<h1 className="section-heading text-background absolute bottom-3 lg:bottom-4 left-2 lg:left-4 z-10">
