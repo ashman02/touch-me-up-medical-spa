@@ -7,15 +7,19 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
 import { useRef } from "react"
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText)
 
 export default function Home() {
 	const heroHeaderRef = useRef<HTMLDivElement>(null)
 	const heroTlRef = useRef<GSAPTimeline>(null)
+	const aboutRef = useRef<HTMLDivElement>(null)
+	const aboutHeaderRef = useRef<HTMLHeadingElement>(null)
 	useGSAP(() => {
+		// hero section animations
 		if (heroTlRef.current) heroTlRef.current.kill()
 		ScrollSmoother.create({
 			smooth: 1,
@@ -38,6 +42,31 @@ export default function Home() {
 				},
 				"-=0.7"
 			)
+
+		// About section animations
+		const splitedAboutHeader = SplitText.create(aboutHeaderRef.current, {
+			type: "chars",
+		})
+		gsap.to(splitedAboutHeader.chars, {
+			color: "var(--color-foreground)",
+			stagger: 0.05,
+			scrollTrigger: {
+				trigger: aboutHeaderRef.current,
+				scrub: true,
+				start: "top 80%",
+				end: "bottom 50%",
+			},
+		})
+		gsap.to(".about-image", {
+			clipPath: "inset(0% 0% 0% 0%)",
+			ease: "sine.inOut",
+			duration: 1,
+			scrollTrigger: {
+				trigger: ".about-image",
+				start: "top 50%",
+				end: "bottom bottom",
+			},
+		})
 	}, [])
 	return (
 		<div id="smooth-wrapper">
@@ -87,8 +116,14 @@ export default function Home() {
 							))}
 						</div>
 					</section>
-					<section className="about-section py-16 md:py-20 flex flex-col gap-6 md:gap-8">
-						<h1 className="section-heading w-full lg:w-3/4 text-gray-300">
+					<section
+						ref={aboutRef}
+						className="about-section py-16 md:py-20 flex flex-col gap-6 md:gap-8"
+					>
+						<h1
+							ref={aboutHeaderRef}
+							className="section-heading w-full lg:w-3/4 text-gray-300"
+						>
 							{homeData.about.title}
 						</h1>
 						<div className="images flex flex-col md:flex-row gap-2 md:gap-3 lg:gap-4">
@@ -102,7 +137,10 @@ export default function Home() {
 										alt="Owner Image"
 										width={920}
 										height={1241}
-										className="w-full h-full object-cover"
+										className="about-image w-full h-full object-cover"
+										style={{
+											clipPath: "inset(0% 0% 100% 0)",
+										}}
 									/>
 								</div>
 							))}
