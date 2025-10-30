@@ -3,6 +3,7 @@ import Button from "@/components/Button"
 import ServiceCard from "@/components/ServiceCard"
 import TestimonialCard from "@/components/TestimonialCard"
 import { homeData } from "@/utils/data"
+import { horizontalLoop, HorizontalLoopTimeline } from "@/utils/InfiniteScroll"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
@@ -20,6 +21,8 @@ export default function Home() {
 	const aboutHeaderRef = useRef<HTMLHeadingElement>(null)
 	const resultsSectionRef = useRef<HTMLDivElement>(null)
 	const resultsContainerRef = useRef<HTMLDivElement>(null)
+	const testiLoopOneRef = useRef<HorizontalLoopTimeline>(null)
+	const testiLoopTwoRef = useRef<HorizontalLoopTimeline>(null)
 	useGSAP(() => {
 		// hero section animations + smooth scrolling and parallax
 		if (heroTlRef.current) heroTlRef.current.kill()
@@ -92,6 +95,26 @@ export default function Home() {
 				markers: true,
 			},
 		})
+
+		// Testimonial section animation
+		testiLoopOneRef.current = horizontalLoop(
+			".testimonial-section-row-1 > div",
+			{
+				repeat: -1,
+				speed: 0.6,
+				paddingRight: 16,
+			}
+		)
+
+		testiLoopTwoRef.current = horizontalLoop(
+			".testimonial-section-row-2 > div",
+			{
+				repeat: -1,
+				speed: 0.6,
+				reversed: true,
+				paddingRight: 16,
+			}
+		)
 	}, [])
 	return (
 		<div id="smooth-wrapper">
@@ -233,7 +256,42 @@ export default function Home() {
 						</div>
 						<div className="testimonial-container flex flex-col gap-2 md:gap-4 overflow-hidden">
 							<div className="overflow-x-visible">
-								<div className="row-1 flex gap-2 md:gap-4">
+								<div
+									className="testimonial-section-row-1 flex gap-2 md:gap-4"
+									onMouseEnter={() => {
+										if (testiLoopOneRef.current) {
+											testiLoopOneRef.current.pause()
+										}
+									}}
+									onMouseLeave={() => {
+										if (testiLoopOneRef.current) {
+											testiLoopOneRef.current.resume()
+										}
+									}}
+									onTouchStart={() => {
+										if (testiLoopOneRef.current) {
+											testiLoopOneRef.current.pause()
+										}
+									}}
+									onTouchEnd={() => {
+										if (testiLoopOneRef.current) {
+											testiLoopOneRef.current.resume()
+										}
+									}}
+								>
+									{homeData.testimonial.testimonialsRow1.map(
+										(t, idx) => (
+											<div
+												key={idx}
+												className="w-[300px] h-[300px] md:w-[434px] md:h-[374px] lg:w-[412px] lg:h-[512px] shrink-0"
+											>
+												<TestimonialCard
+													content={t.content}
+													name={t.name}
+												/>
+											</div>
+										)
+									)}
 									{homeData.testimonial.testimonialsRow1.map(
 										(t, idx) => (
 											<div
@@ -250,7 +308,42 @@ export default function Home() {
 								</div>
 							</div>
 							<div className="overflow-x-visible">
-								<div className="row-2 flex gap-2 md:gap-4">
+								<div
+									className="testimonial-section-row-2 flex gap-2 md:gap-4"
+									onMouseEnter={() => {
+										if (testiLoopTwoRef.current) {
+											testiLoopTwoRef.current.pause()
+										}
+									}}
+									onMouseLeave={() => {
+										if (testiLoopTwoRef.current) {
+											testiLoopTwoRef.current.resume()
+										}
+									}}
+									onTouchStart={() => {
+										if (testiLoopTwoRef.current) {
+											testiLoopTwoRef.current.pause()
+										}
+									}}
+									onTouchEnd={() => {
+										if (testiLoopTwoRef.current) {
+											testiLoopTwoRef.current.resume()
+										}
+									}}
+								>
+									{homeData.testimonial.testimonialsRow2.map(
+										(t, idx) => (
+											<div
+												key={idx}
+												className="w-[300px] h-[300px] md:w-[434px] md:h-[374px] lg:w-[412px] lg:h-[512px] shrink-0"
+											>
+												<TestimonialCard
+													content={t.content}
+													name={t.name}
+												/>
+											</div>
+										)
+									)}
 									{homeData.testimonial.testimonialsRow2.map(
 										(t, idx) => (
 											<div
