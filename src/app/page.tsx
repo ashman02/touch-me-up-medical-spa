@@ -92,7 +92,6 @@ export default function Home() {
 				scrub: 1,
 				pin: true,
 				invalidateOnRefresh: true,
-				markers: true,
 				// Color change callbacks - instant, not scrubbed
 				onEnter: () => {
 					gsap.to("body", {
