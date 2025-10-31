@@ -13,7 +13,7 @@ const Button = ({ title, variant = "primary", ...props }: ButtonProps) => {
 			style={{
 				backgroundColor:
 					variant === "primary"
-						? "var(--color-foreground)"
+						? "var(--color-primary)"
 						: "var(--color-background)",
 				color:
 					variant === "primary"

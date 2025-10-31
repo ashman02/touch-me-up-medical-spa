@@ -18,12 +18,12 @@ const homeData = {
 			},
 			{
 				id : 2,
-				img : "/images/after-1.jpg",
+				img : "/images/after-7.jpg",
 				classes : "bottom-[5%] md:bottom-[2%] right-0 lg:bottom-1/12 lg:right-1/5"
 			},
 			{
 				id : 3,
-				img : "/images/after-2.jpg",
+				img : "/images/after-9.jpg",
 				classes : "top-[70%] md:top-[60%] right-0 lg:top-1/4 lg:right-[5%]"
 			},
 		],

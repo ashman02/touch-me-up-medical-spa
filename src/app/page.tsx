@@ -134,7 +134,7 @@ export default function Home() {
 									{homeData.hero.title2}
 								</div>
 							</h1>
-							<p className="w-full md:w-11/12 lg:w-2/3 text-center paragraph-text">
+							<p className="w-full md:w-11/12 lg:w-2/3 text-center paragraph-text text-gray-500">
 								{homeData.hero.subHeading}
 							</p>
 							<Button
@@ -146,7 +146,10 @@ export default function Home() {
 							{homeData.hero.images.map((img) => (
 								<div
 									key={img.id}
-									className={`w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute overflow-hidden ${img.classes}`}
+									className={`hero-img w-32 h-[82px] md:w-48 md:h-[123px] lg:w-[264px] lg:h-[169px] absolute overflow-hidden ${img.classes}`}
+									style={{
+										clipPath: "inset(0% 0% 100% 0%)",
+									}}
 								>
 									<Image
 										src={img.img}
@@ -155,11 +158,9 @@ export default function Home() {
 										height={169}
 										preload
 										quality={100}
-										className="hero-img w-full h-full object-cover"
-										style={{
-											clipPath: "inset(0% 0% 100% 0%)",
-										}}
+										className=" w-full h-full object-cover"
 									/>
+									<div className="absolute z-20 top-0 left-0 bottom-0 right-0 bg-foreground opacity-30" />
 								</div>
 							))}
 						</div>
