@@ -72,13 +72,14 @@ const homeData = {
 		images: [
 			"/images/b-and-f-1.png",
 			"/images/b-and-f-2.png",
-			"/images/b-and-f-1.png",
-			"/images/b-and-f-2.png",
-			"/images/b-and-f-1.png",
-			"/images/b-and-f-2.png",
-			"/images/b-and-f-1.png",
-			"/images/b-and-f-2.png",
-			"/images/b-and-f-1.png",
+			"/images/b-and-f-3.png",
+			"/images/b-and-f-4.png",
+			"/images/b-and-f-5.png",
+			"/images/b-and-f-6.png",
+			"/images/b-and-f-7.png",
+			"/images/b-and-f-8.png",
+			"/images/b-and-f-9.png",
+			"/images/b-and-f-10.png",
 		],
 	},
 	testimonial: {
@@ -96,36 +97,36 @@ const homeData = {
 					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
 			},
 			{
-				name: "Anna Mckay",
+				name: "Michael M.",
 				content:
-					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+					"Absolutely amazing!  First time here based on my friend Diana's recommendation and the service was top notch! I used to drive to Newport for my routine...",
 			},
 			{
-				name: "Elizabeth T.",
+				name: "Jennifer H.",
 				content:
-					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+					"I recently visited for a Botox treatment, and I couldn't be happier with the results. The staff was incredibly professional and attentive throughout the entire process. They made me feel comfortable and well-informed about the procedure. The results were exactly what I had hoped for, and I left feeling more confident than ever. I highly recommend Touch Me Up Medical Spa & Skin Center for anyone seeking top-notch cosmetic treatments.",
 			},
 		],
 		testimonialsRow2: [
 			{
-				name: "Elizabeth T.",
+				name: "Dalia FL.",
 				content:
-					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+					"1st time coming here and I loved it! Liana was so funny and nice with me and my bf. She made us very comfortable, and the most important thing is that I loved my results! (Chin and Lips)",
 			},
 			{
-				name: "Anna Mckay",
+				name: "Jennifer Mucic",
 				content:
-					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+					"I cannot recommend this place enough. Every person working here is kind and smart. I actually really enjoying walking in, because I know my procedure will be done right. I am getting IPL, which I've been waiting to do for a long time...I'm glad I waited! I've been recommending Touch Me Up Med Spa to friends and family. Everything is extremely clean (even the bathroom smells good!). If you're looking to spruce things up, definitely check this place out.",
 			},
 			{
-				name: "Elizabeth T.",
+				name: "Smantha Wixon.",
 				content:
-					"Only positive things to say about this spa and the women who run it! Most recently, I had my smile lines, chin, and jaw filled.",
+					"Liana is the absolute best! I’ve been to a lot of med spas in LA and Touch Me Up Medical Spa is BY FAR the best one I’ve been to!!! Liana is so warm, professional, and amazing at what she does. She really took her time listening to what I wanted and needed. I feel like I’m in the best hands every time I come in! I’m so grateful for Liana and her whole team. They’re so welcoming and accommodating from the time you step in to the time you leave. Thank you, Liana! You are the absolute best!",
 			},
 			{
-				name: "Anna Mckay",
+				name: "Blanca Flores",
 				content:
-					"I got my cheeks, lips and jaw done about a week ago and I'm obsessed with the results! Love my face and I'm not even wearing makeup in this pic. The team is super nice, they made sure I was comfortable and explained everything that they did. I definitely recommend 💜",
+					"Friendly staff! Excellent results, will not go anywhere else after trying out other places with very bad results. This place gives lasting results.",
 			},
 		],
 	},

@@ -44,6 +44,31 @@
 	--font-body: var(--font-lato);
 }
 
+/* Local modern sleek scrollbar */
+
+/* Apply to individual element */
+.sleek-scrollbar {
+	/* width */
+	::-webkit-scrollbar {
+		width: 2px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: var(--color-gray-100);
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: var(--color-gray-400);
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--color-gray-400) !important;
+	}
+}
 /* utility classes for ease of use */
 
 .my-container {

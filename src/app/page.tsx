@@ -93,6 +93,39 @@ export default function Home() {
 				pin: true,
 				invalidateOnRefresh: true,
 				markers: true,
+				// Color change callbacks - instant, not scrubbed
+				onEnter: () => {
+					gsap.to("body", {
+						backgroundColor: "var(--color-foreground)",
+						color: "var(--color-background)",
+						duration: 0.6,
+						ease: "sine.inOut",
+					})
+				},
+				onLeaveBack: () => {
+					gsap.to("body", {
+						backgroundColor: "var(--color-background)",
+						color: "var(--color-foreground)",
+						duration: 0.6,
+						ease: "sine.inOut",
+					})
+				},
+				onLeave: () => {
+					gsap.to("body", {
+						backgroundColor: "var(--color-background)",
+						color: "var(--color-foreground)",
+						duration: 0.6,
+						ease: "sine.inOut",
+					})
+				},
+				onEnterBack: () => {
+					gsap.to("body", {
+						backgroundColor: "var(--color-foreground)",
+						color: "var(--color-background)",
+						duration: 0.6,
+						ease: "sine.inOut",
+					})
+				},
 			},
 		})
 
@@ -255,7 +288,7 @@ export default function Home() {
 							<h1>{homeData.testimonial.title1}</h1>
 							<h1>{homeData.testimonial.title2}</h1>
 						</div>
-						<div className="testimonial-container flex flex-col gap-2 md:gap-4 overflow-hidden">
+						<div className="testimonial-container flex flex-col gap-2 md:gap-4 overflow-x-hidden">
 							<div className="overflow-x-visible">
 								<div
 									className="testimonial-section-row-1 flex gap-2 md:gap-4"
