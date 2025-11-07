@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Fraunces, Lato } from "next/font/google"
 import "./globals.css"
+import Navbar from "@/components/Navbar"
 
 const mainFont = Fraunces({
 	variable: "--font-fraunces",
@@ -27,6 +28,7 @@ export default function RootLayout({
 			<body
 				className={`${mainFont.variable} ${secondaryFont.variable} bg-background text-foreground font-heading antialiased`}
 			>
+				<Navbar/>
 				{children}
 			</body>
 		</html>
