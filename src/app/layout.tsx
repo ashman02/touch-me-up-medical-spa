@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Fraunces, Lato } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
+import ScrollSmootherProvider from "@/components/ScrollSmootherProvider"
 
 const mainFont = Fraunces({
 	variable: "--font-fraunces",
@@ -10,7 +11,7 @@ const mainFont = Fraunces({
 
 const secondaryFont = Lato({
 	variable: "--font-lato",
-	weight: ["400","700"],
+	weight: ["400", "700"],
 })
 
 export const metadata: Metadata = {
@@ -28,8 +29,8 @@ export default function RootLayout({
 			<body
 				className={`${mainFont.variable} ${secondaryFont.variable} bg-background text-foreground font-heading antialiased`}
 			>
-				<Navbar/>
-				{children}
+				<Navbar />
+				<ScrollSmootherProvider>{children}</ScrollSmootherProvider>
 			</body>
 		</html>
 	)
