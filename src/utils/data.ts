@@ -1,3 +1,36 @@
+const popularServices = [
+	{
+		id: 0,
+		name: "Botox",
+		img: "/images/botox.jpg",
+	},
+	{
+		id: 1,
+		name: "Fillers",
+		img: "/images/filler.jpg",
+	},
+	{
+		id: 2,
+		name: "Laser Hair Removal",
+		img: "/images/laser-hair-removal-2.jpg",
+	},
+	{
+		id: 3,
+		name: "Microneedling",
+		img: "/images/microneedling.jpg",
+	},
+	{
+		id: 4,
+		name: "PRP",
+		img: "/images/prp.jpg",
+	},
+	{
+		id: 5,
+		name: "Morpheus",
+		img: "/images/morepheus.jpg",
+	},
+]
+
 const homeData = {
 	hero: {
 		title1: "Look Naturally Radiant.",
@@ -37,38 +70,7 @@ const homeData = {
 	},
 	services: {
 		title: "How We Erase Years Without Surgery or Time Off Work",
-		servicesArray: [
-			{
-				id: 0,
-				name: "Botox",
-				img: "/images/botox.jpg",
-			},
-			{
-				id: 1,
-				name: "Fillers",
-				img: "/images/filler.jpg",
-			},
-			{
-				id: 2,
-				name: "Laser Hair Removal",
-				img: "/images/laser-hair-removal-2.jpg",
-			},
-			{
-				id: 3,
-				name: "Microneedling",
-				img: "/images/microneedling.jpg",
-			},
-			{
-				id: 4,
-				name: "PRP",
-				img: "/images/prp.jpg",
-			},
-			{
-				id: 5,
-				name: "Morpheus",
-				img: "/images/morepheus.jpg",
-			},
-		],
+		servicesArray: popularServices,
 	},
 	results: {
 		title: "See The Difference for Yourself",
@@ -160,21 +162,77 @@ const footerData = {
 	cta: "Book Your Free Consultation",
 	addresses: [
 		{
-			name : "La Crescenta",
+			name: "La Crescenta",
 			street: "2768 Foothill Boulevard,",
 			city: "La Crescenta,",
-			state : "CA 91214"
+			state: "CA 91214",
 		},
 		{
-			name : "Burbank",
+			name: "Burbank",
 			street: "916 West Burbank Boulevard,",
 			city: "Suite G Burbank,",
-			state : "CA 91506"
+			state: "CA 91506",
 		},
 	],
-	socialsHeading : "Stay Connected",
-	copyrightText : "© 2025 Touch Me Up Medical Spa & Skin Center. All Rights Reserved.",
-	privacy : "Privacy Policy"
+	socialsHeading: "Stay Connected",
+	copyrightText:
+		"© 2025 Touch Me Up Medical Spa & Skin Center. All Rights Reserved.",
+	privacy: "Privacy Policy",
 }
 
-export { homeData, socials, footerData }
+const servicesData = {
+	hero: {
+		heading1: "Medical-Grade Treatments.",
+		heading2: "Natural, Lasting Results",
+		subHeading:
+			"Discover safe, proven aesthetic solutions tailored to your unique goals—performed by certified nurse practitioners you can trust.",
+	},
+	popularServices: {
+		heading1: "Our Most Popular",
+		heading2: "Treatments",
+		servicesArray: popularServices,
+	},
+	allServices: {
+		heading: "Our All Treatments",
+		services: [
+			{
+				id: 0,
+				name: "Botox",
+				img: "/images/botox.jpg",
+			},
+			{
+				id: 1,
+				name: "Fillers",
+				img: "/images/filler.jpg",
+			},
+			{
+				id: 2,
+				name: "Laser Hair Removal",
+				img: "/images/laser-hair-removal-2.jpg",
+			},
+			{
+				id: 3,
+				name: "Microneedling",
+				img: "/images/microneedling.jpg",
+			},
+			{
+				id: 4,
+				name: "PRP",
+				img: "/images/prp.jpg",
+			},
+			{
+				id: 5,
+				name: "Morpheus",
+				img: "/images/morepheus.jpg",
+			},
+		],
+	},
+	ctaSection: {
+		heading: "Not Sure Which Treatment Is Right for You?",
+		subHeading:
+			"Book a free consultation with our expert team. We'll assess your concerns, answer your questions, and create a personalized treatment plan—no pressure, just honest guidance.",
+		cta: "Book Your Free Consultation",
+	},
+}
+
+export { homeData, socials, footerData, servicesData }

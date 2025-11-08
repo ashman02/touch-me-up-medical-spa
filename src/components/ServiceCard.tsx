@@ -5,17 +5,17 @@ interface CardProps {
 	img: string
 }
 
-const ServiceCard = ({ title, img }: CardProps) => {
+const ServiceCard = ({ title, img, ...props }: CardProps) => {
 	return (
-		<div className="card relative w-full">
-			<div className="w-full aspect-square overflow-hidden">
+		<div className="card relative w-full h-full">
+			<div className="w-full h-full overflow-hidden">
 				<Image
 					src={img}
 					alt={title}
 					width={500}
 					height={500}
 					className="w-full h-full object-cover scale-110"
-					data-speed="auto"
+					{...props}
 				/>
 			</div>
 			<h1 className="section-heading text-background absolute bottom-3 lg:bottom-4 left-2 lg:left-4 z-10">

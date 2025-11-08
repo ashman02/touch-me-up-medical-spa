@@ -87,3 +87,6 @@
 .button-text {
 	@apply font-body text-xs md:text-base leading-normal;
 }
+.flex-gap {
+	@apply flex flex-col gap-5 md:gap-6 lg:gap-8;
+}
