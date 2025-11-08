@@ -142,7 +142,7 @@ export default function Home() {
 		)
 	}, [])
 	return (
-		<main className="my-container flex flex-col gap-32 pb-10 overflow-hidden">
+		<main className="my-container flex flex-col gap-32 overflow-hidden">
 			<section className="relative h-screen min-h-[700px] lg:min-h-[600px] w-full">
 				<div
 					className="hero-main-content flex flex-col items-center gap-5 md:gap-6 lg:gap-8 pt-24 md:pt-32 opacity-0"
@@ -267,7 +267,7 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-			<section className="testimonial-section flex flex-col items-center justify-center gap-6 md:gap-8 overflow-hidden">
+			<section className="testimonial-section flex flex-col items-center justify-center gap-6 md:gap-8 overflow-hidden pb-32">
 				<div className="section-heading flex flex-col items-center justify-center">
 					<h1>{homeData.testimonial.title1}</h1>
 					<h1>{homeData.testimonial.title2}</h1>

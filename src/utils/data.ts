@@ -135,7 +135,7 @@ const homeData = {
 	},
 }
 
-export const socials = [
+const socials = [
 	{
 		name: "Instagram",
 		link: "https://www.instagram.com/touchmeupmedspa/",
@@ -154,4 +154,27 @@ export const socials = [
 	},
 ]
 
-export { homeData }
+const footerData = {
+	heading1: "Ready to Reveal Your",
+	heading2: "Best Self?",
+	cta: "Book Your Free Consultation",
+	addresses: [
+		{
+			name : "La Crescenta",
+			street: "2768 Foothill Boulevard,",
+			city: "La Crescenta,",
+			state : "CA 91214"
+		},
+		{
+			name : "Burbank",
+			street: "916 West Burbank Boulevard,",
+			city: "Suite G Burbank,",
+			state : "CA 91506"
+		},
+	],
+	socialsHeading : "Stay Connected",
+	copyrightText : "© 2025 Touch Me Up Medical Spa & Skin Center. All Rights Reserved.",
+	privacy : "Privacy Policy"
+}
+
+export { homeData, socials, footerData }

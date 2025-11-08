@@ -4,6 +4,7 @@ import gsap from "gsap"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { usePathname } from "next/navigation"
+import Footer from "./Footer"
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
@@ -37,12 +38,13 @@ export default function ScrollSmootherProvider({
 	}, [pathname]) // Reinitialize on route change
 
 	return (
-		<div id="smooth-wrapper">
-			<div
-				id="smooth-content"
-				className="pb-[912px] md:pb-[999px] lg:pb-[868px]"
-			>
-				{children}
+		<div className="relative w-full h-full">
+			<div id="smooth-wrapper">
+				<div
+					id="smooth-content">
+					{children}
+					<Footer/>
+				</div>
 			</div>
 		</div>
 	)
